@@ -25,18 +25,18 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     if match:
         url = match.group(0)
-        await update.message.reply_text("جارٍ تحميل الفيديو...")
+        await update.message.reply_text("اصبر شوي🤌 👀")
         video_url = download_tiktok_video(url)
         
         if video_url:
             await update.message.reply_video(video=video_url, caption="هاهو الفيديو من TikTok")
         else:
-            await update.message.reply_text("تعذر تحميل الفيديو. تأكد أن الرابط صحيح.")
+            await update.message.reply_text("مبغاش يمشي شوف تراه رابط صحيح ⛓️‍💥.")
     else:
-        await update.message.reply_text("أرسل رابط فيديو تيك توك فقط.")
+        await update.message.reply_text("ابعث رابط قدقد ولا اخرج عليا 😡.")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("أرسل رابط فيديو من تيك توك وسأقوم بتحميله لك.")
+    await update.message.reply_text("أبعث رابط فيديو تاع تيك توك.⭐📱.")
 
 if __name__ == "__main__":
     app = ApplicationBuilder().token(BOT_TOKEN).build()
