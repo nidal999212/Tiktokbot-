@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 import yt_dlp
 
-TOKEN = os.environ.get("TOKEN")
+TOKEN = os.environ.get("BOT_TOKEN")
 
 ydl_opts = {
     'format': 'bestaudio/best',
